@@ -73,6 +73,13 @@ sudo python . --jtag-available
 
 Then reset your Toon and let the magic happen :)
 
+## It's not working!
+Please re-check your wiring. If you're sure the wiring is correct, try the command with 
+the `--output-level DEBUG` flag set and head over to 
+[this friendly forum](https://www.domoticaforum.eu/viewtopic.php?f=101&t=11999) where the
+issue has most likely already been solved. If not, post a reply and the active community
+will probably help you out.
+
 ## But I don't have a Pi
 
 You should definitely get a Pi.
@@ -167,4 +174,4 @@ This application is based on instructions and software written by:
 - marcelr
 - klaphekje
 - rboers
-- other [domoticaforum.eu](https://www.domoticaforum.eu/viewforum.php?f=87) users
+- other [domoticaforum.eu](https://www.domoticaforum.eu/viewtopic.php?f=101) users
