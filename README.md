@@ -166,9 +166,9 @@ sudo make install
 ## It's not working!
 Common mistakes while using this tool is first of all just please read all information above carefully :-)
 
-Always re-check your wiring. A lot of peopel just forget to wire properly.
+Always re-check your wiring. A lot of people just forget to wire properly.
 
-Also a common mistake is that the /dev/serial0 port isn't enabled (read above) or the Pi console is still connected to the serial port (resulting in double read/writes), also read above how to fix this.
+Also a common mistake is that the /dev/serial0 port isn't enabled (read above) or the Pi console is still connected to the serial port (resulting in double read/writes to the serial port), also read above how to fix this.
 
 Some people have unknown raspberry pi versions, mainly because of of the overclock/warranyt bit has been triggered. This tool can't identify your Pi version so you need to specify it manually.
 
