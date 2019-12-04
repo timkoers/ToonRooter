@@ -179,12 +179,13 @@ issue has most likely already been solved. If not, post a reply and the active c
 will probably help you out.
 
 ## It's is rooted, but what now?
-If the tool worked and you got your SSH access (using the generated root password or ssh key) and are able to run commands on the Toon linux console then you probably want to have those pretty rooted Toon modifications and want to close down your Toon from Eneco and Quby. Just head to the update-rooted script on https://github.com/ToonSoftwareCollective/update-rooted and run that script on your freshly rooted Toon. With option -f it will only run the necessary stuff to setup your Toon properly as a mainstream rooted Toon. Or just follow the script guiding you into updating the Toon to the latest firmware first.
+If the tool worked and you got your SSH access (using the generated root password or ssh key) and are able to run commands on the Toon linux console then you probably want to have those pretty rooted Toon modifications and want to close down your Toon from Eneco and Quby. Just head to the update-rooted script on https://github.com/ToonSoftwareCollective/update-rooted and run that script on your freshly rooted Toon. With option -f it will only run the necessary stuff to setup your Toon properly as a mainstream rooted Toon. Or just run the script without options which will guide you into updating the Toon to the latest firmware first and finish with installing the necessary stuff.
 
 
 ## Thanks
 This application is based on instructions and software written by:
 - marcelr
+- thehognl
 - klaphekje
 - rboers
 - other [domoticaforum.eu](https://www.domoticaforum.eu/viewtopic.php?f=101) users
