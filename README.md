@@ -150,14 +150,9 @@ doesn't support using the Pi's headers as JTAG debugger).
 git clone --recursive git://git.code.sf.net/p/openocd/code openocd
 cd openocd
 sudo apt install make libtool libtool-bin pkg-config autoconf automake texinfo libusb-1.0 libusb-dev
-{
-./bootstrap &&\
-./configure --enable-sysfsgpio\
-     --enable-bcm2835gpio \
-     --prefix=/usr\
-&&\
+./bootstrap
+./configure --enable-sysfsgpio --enable-bcm2835gpio --prefix=/usr
 make -j4
-} 2>&1 | tee openocd_build.log
 sudo make install
 ```
 > these instructions were based on the instructions posted [here](https://www.domoticaforum.eu/viewtopic.php?f=87&t=11230&start=210#p83745) by rboers
