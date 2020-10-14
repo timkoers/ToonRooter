@@ -149,30 +149,30 @@ class Rooter(object):
         tar_path = self.create_payload_tar()
 
         log.debug(port.read_until("/ # "))
-        port.write("base64 -d | tar zxf -\n")
+        port.write("timeout -t 60 base64 -d | tar zxf -\n")
         port.flush()
-        #(tarr, tarw) = os.pipe()
-        #tar = tarfile.open(mode='w|gz', fileobj=tarw)
-        #tar.add("payload/patch_toon.sh")
 
         log.info("Transferring payload")
         with open(tar_path, 'r') as f:
             base64.encode(f, port)
 
+        log.info("Transferring payload done. Waiting for toon to finish.")
         os.remove(tar_path)
 
         port.flush()
         port.reset_input_buffer()
         port.write("\x04")
         port.flush()
+        port.write("\n")
+        log.debug(port.read_until("/ # "))
+        log.info("Transferring payload finished")
 
     def patch_toon(self):
         (port, clean_up, reboot) = (
             self._port, self._cleanup_payload, self._reboot_after)
         log.info("Patching Toon")
-        log.debug(port.read_until("/ # "))
         password = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(8))
-        port.write("sh payload/patch_toon.sh \"{}\"\n".format(password))
+        port.write("if [ -f payload/patch_toon.sh ] ; then sh payload/patch_toon.sh \"{}\" ; fi\n".format(password))
         try:
             while True:
                 line = read_until(port, ["/ # ", "\n"])
