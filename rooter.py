@@ -64,6 +64,7 @@ class Rooter(object):
                         log.info("Your Toon is now booting into a serial console")
                     else:
                         log.info("Waiting for boot up")
+                        log.info("To automatically download the update script (update-rooted.sh) insert an Ethernet cable now!")
                         self.write_payload()
                         self.patch_toon()
                         log.info("Your Toon is now rooted. Please wait for it to boot up and try to log in using SSH")
