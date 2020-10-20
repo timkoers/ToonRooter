@@ -66,3 +66,4 @@ echo >> /root/.ssh/authorized_keys
 # You might aswell download the update script
 echo "Downloading Toon Rooted update script
 curl -Nks https://raw.githubusercontent.com/ToonSoftwareCollective/update-rooted/master/update-rooted.sh -o /root/update-rooted.sh
+chmod +x /root/update-rooted.sh
